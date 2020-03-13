@@ -30,7 +30,7 @@ def generateDataframe (path):
     df_recording=pd.DataFrame({'audios':audioarray})
     return df_recording
 
-gendf = generateDataframe (path)
+#gendf = generateDataframe (path)
 
 def runModel(gendf):
    
@@ -53,8 +53,8 @@ def runModel(gendf):
     print("Evaluating...")
     lang = l.index(max(l))
     if lang == 0:
-        print("🇪🇸 Spanish native speaker with a likelihood of {}%".format(round(l[0]*100, 1)))
+        return("🇪🇸 Spanish native speaker with a likelihood of {}%".format((round(l[0]*100, 1))))
     elif lang == 1:
-        print("🇺🇸 English native speaker with a likelihood of {}%".format(round(l[1]*100, 1)))
-    
-runModel(gendf)
+        return("🇺🇸 English native speaker with a likelihood of {}%".format((round(l[1]*100, 1))))
+
+#runModel(gendf)

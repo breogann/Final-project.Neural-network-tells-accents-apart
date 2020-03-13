@@ -2,9 +2,11 @@ import os
 from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
-from audioClassification import generateDataframe, runModel, gendf
+from audioClassification import generateDataframe, runModel
+from os.path import join, dirname, realpath
 
-UPLOAD_FOLDER = '../input/'
+
+UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'input')
 ALLOWED_EXTENSIONS = {'m4a'}
 
 app = Flask(__name__)
@@ -13,8 +15,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route("/test")
 def test ():
     return {"Success":"The API works!"}
-
-
+    
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -35,21 +36,24 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            to = 'input'+filename
+            to = "/predict/"+filename
+            print(to)
             return redirect(to)
     return '''
     <!doctype html>
     <title>Upload new File</title>
     <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
+    <form method='post' enctype='multipart/form-data'>
       <input type=file name=file>
       <input type=submit value=Upload>
     </form>
     '''
-
-"""@app.route('/input/<filename>')
+@app.route('/input/<filename>')
 def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)"""
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
-
-app.run("0.0.0.0", 9000, debug=False, threaded=False)
+@app.route('/predict/<filename>', methods=['GET'])
+def speakersInAudio(filename):
+    path = f"../outputs/{filename}"
+    result = runModel(generateDataframe(path))
+    return result

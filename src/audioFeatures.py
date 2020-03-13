@@ -16,7 +16,7 @@ def extractFeatures (language):
         if i < len(os.listdir(path)):
             sound = AudioSegment.from_file(f"output/{language}chunks/{language}chunk{i}.wav")
             samples = sound.get_array_of_samples()
-            fft_out = abs(fft(samples, 200000))
+            fft_out = abs(fft(samples, 200000)) #Fourier transformation of the sliced audios
             array.append(np.array(fft_out))
         else:
             break
