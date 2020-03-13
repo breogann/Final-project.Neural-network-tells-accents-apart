@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from flask import send_from_directory
 from audioClassification import generateDataframe, runModel, gendf
 
-UPLOAD_FOLDER = '/input/'
+UPLOAD_FOLDER = '../input/'
 ALLOWED_EXTENSIONS = {'m4a'}
 
 app = Flask(__name__)
@@ -35,8 +35,8 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file',
-                                    filename=filename))
+            to = 'input'+filename
+            return redirect(to)
     return '''
     <!doctype html>
     <title>Upload new File</title>
@@ -47,18 +47,9 @@ def upload_file():
     </form>
     '''
 
-@app.route('/input/<filename>')
+"""@app.route('/input/<filename>')
 def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-
-
-"""@app.route('/speakers/<audioname>', methods=['GET'])
-def speakersInAudio(audioname):
-    #audioName => audio_mix.mp3
-    path = f"../outputs/audioMix/{audioname}"
-    result = predictAudio(featuresFFT(path))
-    print("Esto es api.py:\n",result)
-    return result"""
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)"""
 
 
 app.run("0.0.0.0", 9000, debug=False, threaded=False)
