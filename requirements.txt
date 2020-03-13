@@ -1,0 +1,13 @@
+jsonschema==3.2.0
+requests==2.22.0
+Flask==1.1.1
+Flask-RESTful==0.3.8
+tensorboard==1.15.0
+tensorflow==1.15.2
+tensorflow-estimator==1.15.1
+Werkzeug==1.0.0
+scipy==1.4.1
+pydub==0.23.1
+Keras==2.2.4
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.0
