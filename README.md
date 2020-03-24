@@ -6,13 +6,13 @@
 
 Deep learning trained API that discriminates English native speakers and non-native speakers of English. The users records themselves and upload an audio file. The API returns the category of the speaker and how close it is to that accent. Adjustable to any other language if data is provided.
 
-With over 450 recordings for each accent, a deep learning model (Convolutional Neural Networks)was trained so it could discriminate between them.
+With over 450 recordings for each accent, a deep learning model (Convolutional Neural Networks) was trained so it could discriminate between them.
 
 At the moment the API can be executed locally.
 
 
 ## Data 📊 ##
-### /ˈdeɪtə/ ###
+### /ˈdeɪtə/ ##
 
 The speech accent archive (https://accent.gmu.edu) has a compilation of a huge variety of speakers with different backgrounds that read the same paragraph so it can be analyzed.
 
