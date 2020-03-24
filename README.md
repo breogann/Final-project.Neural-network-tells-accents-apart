@@ -2,7 +2,7 @@
   <img width="1000" height="300" src="https://github.com/breogann/-neural-network-to-tell-accents-apart/blob/master/Images/cover.png" alt="What's my accent?">
 </p>
 
-# Neural network tells accents apart 🇪🇸 🇺🇸 
+# Neural network tells accents apart 
 
 Deep learning trained API that discriminates English native speakers and non-native speakers of English. The users records themselves and upload an audio file. The API returns the category of the speaker and how close it is to that accent. Adjustable to any other language if data is provided.
 
