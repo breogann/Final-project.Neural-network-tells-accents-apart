@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600" height="200" src="https://github.com/breogann/-neural-network-to-tell-accents-apart/blob/master/Images/cover.png)" alt="What's my accent?">
+  <img width="1000" height="300" src="https://github.com/breogann/-neural-network-to-tell-accents-apart/blob/master/Images/cover.png" alt="What's my accent?">
 </p>
 
 # Accent recogntion 🇪🇸 🇺🇸 
