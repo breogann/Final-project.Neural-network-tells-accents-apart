@@ -1,6 +1,6 @@
 # Accent recogntion 🇪🇸 🇺🇸 
 
-![soundwaves](https://github.com/breogann/-neural-network-to-tell-accents-apart/blob/master/Images/soundwaves.jpg)
+![What is my accent?](https://github.com/breogann/-neural-network-to-tell-accents-apart/blob/master/Images/cover.png)
 
 This API aims to evaluate whether someone is a native speaker of English or Spanish through accent detection. With over 450 recordings for each accent, a deep learning model was trained so it could discriminate between them.
 
