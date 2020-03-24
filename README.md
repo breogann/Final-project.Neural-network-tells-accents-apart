@@ -2,13 +2,14 @@
   <img width="1000" height="300" src="https://github.com/breogann/-neural-network-to-tell-accents-apart/blob/master/Images/cover.png" alt="What's my accent?">
 </p>
 
-# Accent recogntion 🇪🇸 🇺🇸 
+# Neural network tells accents apart 🇪🇸 🇺🇸 
 
-This API aims to evaluate whether someone is a native speaker of English or Spanish through accent detection. With over 450 recordings for each accent, a deep learning model was trained so it could discriminate between them.
+Deep learning trained API that discriminates English native speakers and non-native speakers of English. The users records themselves and upload an audio file. The API returns the category of the speaker and how close it is to that accent. Adjustable to any other language if data is provided.
+
+With over 450 recordings for each accent, a deep learning model (Convolutional Neural Networks)was trained so it could discriminate between them.
 
 At the moment the API can be executed locally.
 
-This app was programed in Python, using (CNN) Convolutional Neural Networks 🤖from Keras.
 
 ## Data 📊 ##
 ### /ˈdeɪtə/ ###
@@ -28,7 +29,7 @@ Three scripts (getAudio.py, audioProcessing.py, audioFeatures.py) show how, by i
 
 The rest of .py files are what the ones used to make the API and CNN model work. 
 
-Used technologies 🔌:
+#### Used technologies 🔌: ####
 - Flask
 - PyDub (AudioSegment)
 - SciPy
