@@ -9,6 +9,8 @@ import tensorflow
 import numpy as np
 from audioFeatures import bothDF
 
+#4 TRAINING THE NEURAL NETWORK
+
 X = np.vstack(bothDF.audios)
 y = bothDF.language
 
@@ -32,7 +34,8 @@ def modelTraining (X, y):
                 loss='sparse_categorical_crossentropy',
                 metrics=['accuracy'])
 
-    model.fit(X_train, #fitting of the model
+    #Fitting of the model
+    model.fit(X_train,
             y_train,
             epochs=50,
             batch_size=20,
@@ -40,6 +43,7 @@ def modelTraining (X, y):
     
     name="output/0.7741-accuracy-200000-50epochs-loss1.4109"
 
+    #Prediction of the model
     predictions = model.predict(X_test)
     print(predictions)
 

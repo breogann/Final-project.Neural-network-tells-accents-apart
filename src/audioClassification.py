@@ -7,6 +7,10 @@ import json
 from keras.models import load_model
 from keras.models import model_from_json
 
+#5 DISCRIMINATING ACCENTS
+
+#First, we record the audio, then we need to transform it into a dataframe and then run the model on that DF.
+
 path = "../input/test.m4a"
 
 def generateDataframe (path):

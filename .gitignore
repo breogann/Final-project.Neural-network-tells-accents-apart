@@ -138,7 +138,5 @@ output/.DS_Store
 src/__pycache__/audioClassification.cpython-37.pyc
 output/0.7741-accuracy-200000-50epochs-loss1.4109 .h5
 output/0.7741-accuracy-200000-50epochs-loss1.4109 .json
-test1.m4a
-try_your_audio_here.ipynb
-test.m4a
 input/test1 2.m4a
+ignore

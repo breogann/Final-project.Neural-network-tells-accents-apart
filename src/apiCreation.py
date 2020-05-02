@@ -5,6 +5,7 @@ from flask import send_from_directory
 from audioClassification import generateDataframe, runModel
 from os.path import join, dirname, realpath
 
+#6 CREATING AN API
 
 UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'input')
 ALLOWED_EXTENSIONS = {'m4a'}
@@ -55,5 +56,6 @@ def uploaded_file(filename):
 @app.route('/predict/<filename>', methods=['GET'])
 def recordedAudio (filename):
     path = f"../outputs/{filename}"
-    result = runModel(generateDataframe(path))
-    return result
+    return runModel(generateDataframe(path))
+
+app.run('0.0.0.0', port=5000, debug=False, threaded=False)
