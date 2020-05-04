@@ -11,9 +11,9 @@ from keras.models import model_from_json
 
 #First, we record the audio, then we need to transform it into a dataframe and then run the model on that DF.
 
-path = "../input/test.m4a"
+def generateDataframe(path):
 
-def generateDataframe (path):
+    print("Generando Dataframe")
     
     #Conversion to a .wav
     total = AudioSegment.from_file(path, format = 'm4a')
@@ -34,10 +34,8 @@ def generateDataframe (path):
     df_recording=pd.DataFrame({'audios':audioarray})
     return df_recording
 
-gendf = generateDataframe (path)
-
 def runModel(gendf):
-   
+
     trained_model = ("0.7741-accuracy-200000-50epochs-loss1.4109")
     #Load the trained neural network model
     print("Loading neural network...")
@@ -60,5 +58,5 @@ def runModel(gendf):
         print("🇪🇸 Spanish native speaker with a likelihood of {}%".format((round(l[0]*100, 1))))
     elif lang == 1:
         print("🇺🇸 English native speaker with a likelihood of {}%".format((round(l[1]*100, 1))))
-
-runModel(gendf)
+    
+    return ""

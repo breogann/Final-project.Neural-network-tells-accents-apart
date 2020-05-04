@@ -1,9 +1,10 @@
 import os
 from flask import Flask, flash, request, redirect, url_for
-from werkzeug.utils import secure_filename
+from werkzeug.utils import secure_filename #For uploading files to the API
 from flask import send_from_directory
 from audioClassification import generateDataframe, runModel
 from os.path import join, dirname, realpath
+from audioClassification import *
 
 #6 CREATING AN API
 
@@ -58,4 +59,4 @@ def recordedAudio (filename):
     path = f"../outputs/{filename}"
     return runModel(generateDataframe(path))
 
-app.run('0.0.0.0', port=5000, debug=False, threaded=False)
+app.run('0.0.0.0', port=5000, debug=False, threaded=False) #http://0.0.0.0:5000
