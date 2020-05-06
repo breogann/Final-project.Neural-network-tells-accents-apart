@@ -13,8 +13,6 @@ import json
 #First, we record the audio, then we need to transform it into a dataframe and then run the model on that DF.
 
 def generateDataframe(path):
-
-    print("Generando Dataframe")
     
     #Conversion to a .wav
     total = AudioSegment.from_file(path, format = 'm4a')

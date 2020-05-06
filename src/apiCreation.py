@@ -50,7 +50,7 @@ def upload_file():
 <body style="background-color:#946B9C;">
 <h1>Which is my accent? 🎙</h1>
 <h2>Record yourself reading the following text and upload it so the cat can judge you:</h2>
-<p style="text-align:left;"> 🛠 If you're using macOS, open the Voice memo app and drag your voice note to your desktop.</p>
+<p style="text-align:left;"> 🛠 If you're using macOS, open the Voice memo app and drag your voice note to your desktop. Whatsapp voice notes should also work.</p>
 <p>"Please call Stella.  Ask her to bring these things with her from the store:  Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.  We also need a small plastic snake and a big toy frog for the kids.  She can scoop these things into three red bags, and we will go meet her Wednesday at the train station."</p>
 <form method=post enctype=multipart/form-data>
       <input type=file name=file style="height:40px; width:80px">
