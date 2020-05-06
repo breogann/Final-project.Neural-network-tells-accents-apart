@@ -6,6 +6,7 @@ from scipy.fftpack import fft
 import json
 from keras.models import load_model
 from keras.models import model_from_json
+import json
 
 #5 DISCRIMINATING ACCENTS
 
@@ -51,12 +52,10 @@ def runModel(gendf):
     language = model.predict(x_prueba)
     l=language[0].tolist()
     
-    #Return of info to the user
+    #Returning info to the user
     print("Evaluating...")
     lang = l.index(max(l))
     if lang == 0:
-        print("🇪🇸 Spanish native speaker with a likelihood of {}%".format((round(l[0]*100, 1))))
+        return("🇪🇸 Spanish native speaker with a likelihood of {}%".format((round(l[0]*100, 1))))
     elif lang == 1:
-        print("🇺🇸 English native speaker with a likelihood of {}%".format((round(l[1]*100, 1))))
-    
-    return ""
+        return("🇺🇸 English native speaker with a likelihood of {}%".format((round(l[1]*100, 1))))
