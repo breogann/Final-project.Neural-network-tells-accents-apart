@@ -34,4 +34,4 @@ scikit_learn == 0.22.1
 scipy == 1.4.1
 
 # final/src/modelTraining.py: 8
-tensorflow ==
+tensorflow == 2.2.0
