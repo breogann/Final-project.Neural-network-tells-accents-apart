@@ -13,12 +13,12 @@ Werkzeug == 1.0.0
 # final/src/audioClassification.py: 3
 # final/src/audioFeatures.py: 4
 # final/src/modelTraining.py: 9
-numpy == 1.18.0
+numpy == 1.16.0
 
 # final/src/audioClassification.py: 2
 # final/src/audioFeatures.py: 5
 # final/src/getAudio.py: 2
-pandas == 1.0.1
+pandas == 0.24.2
 
 # final/src/audioClassification.py: 1
 # final/src/audioFeatures.py: 1
@@ -27,11 +27,11 @@ pandas == 1.0.1
 pydub == 0.23.1
 
 # final/src/modelTraining.py: 6,7
-scikit_learn == 0.22.1
+#scikit_learn == 0.20.4
 
 # final/src/audioClassification.py: 5
 # final/src/audioFeatures.py: 2
-scipy == 1.4.1
+scipy == 1.2.3
 
 # final/src/modelTraining.py: 8
-tensorflow == 2.2.0
+#tensorflow == 1.15.0
