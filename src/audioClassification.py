@@ -4,9 +4,8 @@ import numpy as np
 import os
 from scipy.fftpack import fft
 import json
-from keras.models import load_model
 from keras.models import model_from_json
-import json
+from tensorflow.keras.models import model_from_json
 
 #5 DISCRIMINATING ACCENTS
 
