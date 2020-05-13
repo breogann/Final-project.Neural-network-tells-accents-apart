@@ -4,8 +4,8 @@ import numpy as np
 import os
 from scipy.fftpack import fft
 import json
-from keras.models import model_from_json
 from tensorflow.keras.models import model_from_json
+import json
 
 #5 DISCRIMINATING ACCENTS
 
@@ -14,8 +14,8 @@ from tensorflow.keras.models import model_from_json
 def generateDataframe(path):
     
     #Conversion to a .wav
-    total = AudioSegment.from_file(path, format = 'm4a')
-    output_path = "../output/"
+    total = AudioSegment.from_file(path, format='m4a')
+    output_path = "output/"
     file_name = "recording.wav"
     complete_path = output_path+file_name
     total.export(complete_path, format='wav')
@@ -37,10 +37,10 @@ def runModel(gendf):
     trained_model = ("0.7741-accuracy-200000-50epochs-loss1.4109")
     #Load the trained neural network model
     print("Loading neural network...")
-    with open(f'../output/{trained_model} .json','r') as f:
+    with open(f'output/{trained_model} .json','r') as f:
         model_json = json.load(f)
         model = model_from_json(model_json)
-        model.load_weights(f"../output/{trained_model} .h5")
+        model.load_weights(f"output/{trained_model} .h5")
     
     #Prediction
     print("Predicting...")
