@@ -128,16 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-setting.json
+#DS_Store
 .DS_Store
-/output/recording.wav
-input/.DS_Store
-input/test/
-input/test
-output/.DS_Store
-src/__pycache__/audioClassification.cpython-37.pyc
-output/0.7741-accuracy-200000-50epochs-loss1.4109 .h5
-output/0.7741-accuracy-200000-50epochs-loss1.4109 .json
-input/test1 2.m4a
-ignore
-../input/dadss.m4a
+.DS_Store?
+**/.DS_Store
+
+input/dadss.m4a
+input/Hannah.m4a
+output/*
