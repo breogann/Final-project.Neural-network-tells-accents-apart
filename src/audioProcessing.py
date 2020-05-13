@@ -9,7 +9,7 @@ def getConcatenatedAudio(language):
     total = 0
     for i in f"{language}names":
         total += AudioSegment.from_file(f"../input/{language}/{i}.mp3", format = 'mp3')
-    total.export(f"./output/total{language}.wav", format='wav')
+    total.export(f"output/total{language}.wav", format='wav')
 
 getConcatenatedAudio("spanish")
 getConcatenatedAudio("english")
@@ -17,7 +17,7 @@ getConcatenatedAudio("english")
 #2.2. Slicing it into even parts
 def sliceAudio(itv, ovl, language):
     #Slice audio in even parts with an overlap
-    total = AudioSegment.from_wav(f"../output/total{language}.wav") 
+    total = AudioSegment.from_wav(f"output/total{language}.wav") 
     
     interval = itv * 1000 #Every 20s
     overlap = ovl * 1000 #Overlap 10s
@@ -27,7 +27,7 @@ def sliceAudio(itv, ovl, language):
     start = 0
     end = 0
 
-    output_path = f'../output/{language}chunks/'
+    output_path = f'output/{language}chunks/'
     os.mkdir(output_path) #Creates a folder where the sliced audios will be
     
     for i in range(0, 2*n, interval): 
